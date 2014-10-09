@@ -1,0 +1,118 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+aspnet_sample
+</name>
+</assembly>
+<members>
+<member name="F:aspnet_sample.SampleRoleProvider.mRoleNames">
+	<summary>
+ サンプル・ロールプロバイダ
+ </summary>
+	<remarks>サポートしないメソッドはNotSupportedException例外をスローする</remarks>
+</member><member name="P:aspnet_sample.SampleMembershipProvider.ApplicationName">
+	<summary>
+ サンプル・メンバーシッププロバイダ
+ </summary>
+	<remarks>サポートしないメソッドはNotSupportedException例外をスローする</remarks>
+</member><member name="F:aspnet_sample.Login.Login">
+	<summary>
+Login コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:aspnet_sample.Site.head">
+	<summary>
+head コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:aspnet_sample.Site.form1">
+	<summary>
+form1 コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:aspnet_sample.Site.ScriptManager1">
+	<summary>
+ScriptManager1 コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:aspnet_sample.Site.SiteMapDataSource1">
+	<summary>
+SiteMapDataSource1 コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:aspnet_sample.Site.menu">
+	<summary>
+menu コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:aspnet_sample.Site.LoginStatus">
+	<summary>
+LoginStatus コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:aspnet_sample.Site.LoginName">
+	<summary>
+LoginName コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:aspnet_sample.Site.ContentPlaceHolder1">
+	<summary>
+ContentPlaceHolder1 コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="P:aspnet_sample.My.MyWebExtension.Computer">
+	<summary>
+ ホスト コンピュータに関する情報を返します。
+ </summary>
+</member><member name="P:aspnet_sample.My.MyWebExtension.User">
+	<summary>
+ 現在の Web ユーザーに関する情報を返します。
+ </summary>
+</member><member name="P:aspnet_sample.My.MyWebExtension.Request">
+	<summary>
+ Request オブジェクトを返します。
+ </summary>
+</member><member name="P:aspnet_sample.My.MyWebExtension.Response">
+	<summary>
+ Response オブジェクトを返します。
+ </summary>
+</member><member name="P:aspnet_sample.My.MyWebExtension.Log">
+	<summary>
+ Asp ログ オブジェクトを返します。
+ </summary>
+</member><member name="T:aspnet_sample.My.MyWebExtension">
+	<summary>
+ Web プロジェクトの My Namespace で使用できるプロパティを定義するためのモジュール
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

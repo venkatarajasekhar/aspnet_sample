@@ -1,0 +1,101 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="aspnet_sample.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>ASP.NET Sample</title>
+
+    <!-- 1.Bootstrap -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="<%=ResolveUrl("~/js/html5shiv.min.js")%>"></script>
+      <script type="text/javascript" src="<%=ResolveUrl("~/js/respond.min.js")%>"></script>
+    <![endif]-->
+
+    <!-- 2.jQuery UI -->
+    <link href="~/css/jquery-ui-bootstrap-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />    <!-- Bootstrap風テーマ -->
+    <link href="~/css/jquery-ui-bootstrap-theme/jquery-ui-1.10.0.ie.css" rel="stylesheet" />        <!-- Bootstrap風テーマ -->
+
+
+    <!-- 3.jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/js/jquery-1.11.1.min.js")%>"></script>             <!-- jQuery -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/js/jquery.inputmask.bundle.min.js")%>"></script>   <!-- jQueryプラグイン -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/js/jquery-ui.min.js")%>"></script>                 <!-- jQuery UI -->
+
+    <!-- 4.Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/js/bootstrap.min.js")%>"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <%-- 子ページのHeadがここに入ります --%>
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+            
+                <div class="navbar-header">
+                    ASP.NET Sample
+                </div>
+
+                <ul class="nav nav-pills navbar-btn">
+
+                    <%--サイトマップを使用してメニューを作成する--%>
+                    <%--Web.configでセキュリティトリミングを設定しているので、参照権限を持っているメニューだけが表示される--%>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" StartingNodeOffset="0" />
+                    <asp:Repeater runat="server" ID="menu" DataSourceID="SiteMapDataSource1">
+                        <ItemTemplate>
+                            <li class='<%# IIf(LCase(Request.FilePath) = LCase(Container.DataItem.Url), "active", "") %>'>
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("Url") %>' CssClass='<%# IIf(Container.DataItem.ChildNodes.Count>0, "dropdown-toggle", "") %>' data-toggle='<%# IIf(Container.DataItem.ChildNodes.Count>0, "dropdown", "") %>'><%# Eval("Title") %><%#IIf(Container.DataItem.ChildNodes.Count > 0, " <span class='caret'></span>", "")%></asp:HyperLink>
+
+                                <%--サブメニューを作成--%>
+                                <asp:Repeater ID="Repeater2" runat="server" DataSource='<%# Container.DataItem.ChildNodes %>'>
+                                    <HeaderTemplate>
+                                        <ul class="dropdown-menu" role="menu">
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                    <FooterTemplate>
+                                        </ul>
+                                    </FooterTemplate>
+                                </asp:Repeater>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+                    <!-- ログアウトボタン -->
+                    <li class="pull-right">
+                        <asp:LoginStatus ID="LoginStatus" runat="server" CssClass="btn btn-link" LogoutAction="Redirect" LogoutPageUrl="~/" />                          
+                    </li>
+                    <!-- ユーザーＩＤ -->
+                    <li class="pull-right">
+                        <asp:LoginName ID="LoginName" runat="server"/>
+                    </li>
+
+                </ul>
+                
+            </div>
+        </nav>
+
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <%-- 子ページのBodyがここに入ります --%>    
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

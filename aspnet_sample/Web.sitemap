@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode roles="*"> <!--ルート階層の権限は不要とする-->
+        <!--各ページの表示は、Web.configでの設定に従ったセキュリティトリミングがかかる-->
+        <siteMapNode url="~/Default.aspx" title="Default"  description="" />
+        <siteMapNode url="~/view/user/User1.aspx" title="User1"  description="" />
+        <siteMapNode url="~/view/admin" title="Admin"  description="" >
+            <siteMapNode url="~/view/admin/Admin.aspx" title="Admin"  description="" />
+            <siteMapNode url="~/view/admin/Admin1.aspx" title="Admin1"  description="" />
+            <siteMapNode url="~/view/admin/Admin2.aspx" title="Admin2"  description="" />
+        </siteMapNode>    
+    </siteMapNode>
+</siteMap>

@@ -1,0 +1,9 @@
+D:\nose\aspnet_sample\aspnet_sample\bin\aspnet_sample.dll
+D:\nose\aspnet_sample\aspnet_sample\bin\aspnet_sample.pdb
+D:\nose\aspnet_sample\aspnet_sample\bin\aspnet_sample.xml
+D:\nose\aspnet_sample\aspnet_sample\obj\Debug\ResolveAssemblyReference.cache
+D:\nose\aspnet_sample\aspnet_sample\obj\Debug\aspnet_sample.Resources.resources
+D:\nose\aspnet_sample\aspnet_sample\obj\Debug\aspnet_sample.vbproj.GenerateResource.Cache
+D:\nose\aspnet_sample\aspnet_sample\obj\Debug\aspnet_sample.dll
+D:\nose\aspnet_sample\aspnet_sample\obj\Debug\aspnet_sample.xml
+D:\nose\aspnet_sample\aspnet_sample\obj\Debug\aspnet_sample.pdb

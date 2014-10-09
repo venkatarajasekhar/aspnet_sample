@@ -86,12 +86,35 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="view\admin\Admin1.aspx.designer.vb">
+      <DependentUpon>Admin1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\Admin1.aspx.vb">
+      <DependentUpon>Admin1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="view\admin\Admin2.aspx.designer.vb">
+      <DependentUpon>Admin2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\Admin2.aspx.vb">
+      <DependentUpon>Admin2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\SampleMembershipProvider.vb" />
+    <Compile Include="App_Code\SampleRoleProvider.vb" />
     <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -112,8 +135,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\admin\Admin.aspx.designer.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\Admin.aspx.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="view\user\User1.aspx.designer.vb">
+      <DependentUpon>User1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\user\User1.aspx.vb">
+      <DependentUpon>User1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_LocalResources\Login.aspx.resx">
+    </Content>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -122,6 +168,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.svg" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -131,9 +181,57 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="view\admin\Admin.aspx" />
+    <Content Include="Web.sitemap" />
+    <Content Include="view\admin\Admin1.aspx" />
+    <Content Include="view\admin\Admin2.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\images\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="css\jquery-ui-bootstrap-theme\jquery-ui-1.10.0.custom.css" />
+    <Content Include="css\jquery-ui-bootstrap-theme\jquery-ui-1.10.0.ie.css" />
+    <Content Include="css\jquery-ui-bootstrap-theme\jquery-ui-1.9.2.custom.css" />
+    <Content Include="css\jquery-ui-bootstrap-theme\jquery.ui.1.9.2.ie.css" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\html5shiv.min.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.inputmask.bundle.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="Site.Master" />
+    <Content Include="view\user\User1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="img\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -148,12 +246,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50664</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost/aspnet_sample</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

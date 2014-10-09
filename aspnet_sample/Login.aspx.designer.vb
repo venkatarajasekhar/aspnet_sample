@@ -13,5 +13,14 @@ Option Explicit On
 
 
 
-Partial Public Class _Default
+Partial Public Class Login
+
+    '''<summary>
+    '''Login コントロール。
+    '''</summary>
+    '''<remarks>
+    '''自動生成されたフィールド。
+    '''変更するには、フィールドの宣言をデザイナ ファイルから分離コード ファイルに移動します。
+    '''</remarks>
+    Protected WithEvents Login As Global.System.Web.UI.WebControls.Login
 End Class

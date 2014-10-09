@@ -13,5 +13,5 @@ Option Explicit On
 
 
 
-Partial Public Class _Default
+Partial Public Class User1
 End Class
