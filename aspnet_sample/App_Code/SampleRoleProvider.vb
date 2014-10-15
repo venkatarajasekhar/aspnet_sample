@@ -6,15 +6,17 @@
     ''' </summary>
     ''' <remarks>サポートしないメソッドはNotSupportedException例外をスローする</remarks>
 
-    Private mRoleNames() As String
-
-    Public Sub New()
-        Dim r As String() = {""}
-        mRoleNames = r
-    End Sub
+    Private Const COOKIE_ROLENAMES = "RoleNames"
 
     Public Overrides Sub AddUsersToRoles(ByVal usernames() As String, ByVal roleNames() As String)
-        mRoleNames = roleNames
+
+        ' ロールはCookieに保存する
+        Dim cookie As HttpCookie = New HttpCookie(COOKIE_ROLENAMES)
+        With cookie
+            .Value = Join(roleNames, ",")
+        End With
+        HttpContext.Current.Response.SetCookie(cookie)
+
     End Sub
 
     Public Overrides Property ApplicationName() As String
@@ -43,7 +45,16 @@
     End Function
 
     Public Overrides Function GetRolesForUser(ByVal username As String) As String()
-        Return mRoleNames
+
+        ' Cookieからロールを取得する
+        Try
+            Dim cookie As HttpCookie = HttpContext.Current.Request.Cookies(COOKIE_ROLENAMES)
+            Return cookie.Value.Split(",")
+        Catch ex As Exception
+            Dim roleNames() As String = {""}
+            Return roleNames
+        End Try
+
     End Function
 
     Public Overrides Function GetUsersInRole(ByVal roleName As String) As String()

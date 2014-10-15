@@ -19,12 +19,12 @@
       <script type="text/javascript" src="<%=ResolveUrl("~/js/respond.min.js")%>"></script>
     <![endif]-->
 
-    <!-- 2.jQuery UI -->
+    <!-- 2.jQuery UIテーマ -->
     <link href="~/css/jquery-ui-bootstrap-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />    <!-- Bootstrap風テーマ -->
     <link href="~/css/jquery-ui-bootstrap-theme/jquery-ui-1.10.0.ie.css" rel="stylesheet" />        <!-- Bootstrap風テーマ -->
 
 
-    <!-- 3.jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- 3.jQuery -->
     <script type="text/javascript" src="<%=ResolveUrl("~/js/jquery-1.11.1.min.js")%>"></script>             <!-- jQuery -->
     <script type="text/javascript" src="<%=ResolveUrl("~/js/jquery.inputmask.bundle.min.js")%>"></script>   <!-- jQueryプラグイン -->
     <script type="text/javascript" src="<%=ResolveUrl("~/js/jquery-ui.min.js")%>"></script>                 <!-- jQuery UI -->
@@ -83,7 +83,8 @@
                     </li>
                     <!-- ユーザーＩＤ -->
                     <li class="pull-right">
-                        <asp:LoginName ID="LoginName" runat="server"/>
+                        User ID:<asp:LoginName ID="LoginName" runat="server"/><br />
+                        Role: <%= Join(Roles.GetRolesForUser(Context.User.Identity.Name), ", ")%>
                     </li>
 
                 </ul>
