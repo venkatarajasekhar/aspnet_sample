@@ -4,7 +4,6 @@ aspnet_sample
 ASP.NETサンプル  
 * Microsoft Visual Web Developer 2008 Express Edition向けソリューションとして作成
 * IE8で検証
-
 * ASP.NET 3.5
 * Bootstrap 3.0 <http://getbootstrap.com/>
 * HTML5 Shim (Bootstrapで使用。IE8でHTML5タグを使えるようにする)
